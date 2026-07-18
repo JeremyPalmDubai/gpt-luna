@@ -1,21 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { baseUrl } from "./site-data";
 
-export const metadata: Metadata = {
-  metadataBase: new URL("https://luna-residences-bali.site"),
-  title: "Luna Residences Bali | Résidences d’exception à Nuanu",
-  description: "15 résidences avec vues océan, rivière et jungle à Nuanu Creative City. À partir de 185 000 $, gestion 5 étoiles et intérieurs YODEZEEN.",
-  icons: { icon: "/favicon.svg" },
-  openGraph: {
-    title: "Luna Residences — Là où la rivière rencontre l’océan",
-    description: "15 résidences d’exception à Nuanu, Bali. À partir de 185 000 $.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Luna Residences à Nuanu, Bali" }],
-    locale: "fr_FR",
-    type: "website",
-  },
-  twitter: { card: "summary_large_image", images: ["/og.png"] },
-};
+export const metadata:Metadata={metadataBase:new URL(baseUrl),icons:{icon:"/favicon.svg"},robots:{index:true,follow:true,googleBot:{index:true,follow:true,"max-image-preview":"large","max-snippet":-1,"max-video-preview":-1}}};
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="fr"><body>{children}</body></html>;
+export default function RootLayout({children}:{children:React.ReactNode}){
+ const schema={"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":`${baseUrl}/#organization`,name:"Luna Residences",url:baseUrl,email:"igor@nuanu.realestate",telephone:"+62 823 4064 4814",address:{"@type":"PostalAddress",addressLocality:"Beraban",addressRegion:"Bali",addressCountry:"ID"}},{"@type":"WebSite","@id":`${baseUrl}/#website`,url:baseUrl,name:"Luna Residences Bali",inLanguage:["en","fr","es","pt"],publisher:{"@id":`${baseUrl}/#organization`}},{"@type":"RealEstateListing",name:"Luna Residences",url:baseUrl,description:"A limited collection of 15 ocean-view residences at Nuanu Creative City, Bali.",datePosted:"2026-07-18",offers:{"@type":"Offer",price:"185000",priceCurrency:"USD",availability:"https://schema.org/PreOrder"},address:{"@type":"PostalAddress",addressLocality:"Beraban",addressRegion:"Bali",addressCountry:"ID"}}]};
+ return <html lang="en"><body>{children}<script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/></body></html>
 }

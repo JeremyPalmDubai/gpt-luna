@@ -1,0 +1,3 @@
+import type { MetadataRoute } from "next";
+import { baseUrl, locales, routeFor } from "./site-data";
+export default function sitemap():MetadataRoute.Sitemap{const pages=[undefined,"residences","investment","nuanu","buying-guide"];return locales.flatMap(locale=>pages.map(page=>({url:`${baseUrl}${routeFor(locale,page)}`,lastModified:new Date("2026-07-18"),changeFrequency:page?"monthly":"weekly",priority:page?0.8:1,alternates:{languages:Object.fromEntries(locales.map(l=>[l,`${baseUrl}${routeFor(l,page)}`]).concat([["x-default",`${baseUrl}${routeFor("en",page)}`]]))}} as MetadataRoute.Sitemap[number])))}

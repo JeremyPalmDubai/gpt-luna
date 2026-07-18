@@ -1,0 +1,1 @@
+import {DetailPage} from "../components/Site";import {seo} from "../seo";export const metadata=seo("en","investment");export default function Page(){return <DetailPage locale="en" page="investment"/>}
