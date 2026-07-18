@@ -13,3 +13,6 @@
 .seo-footer{grid-template-columns:1.45fr repeat(3,1fr);column-gap:5vw;row-gap:4vw}.footer-intro p{color:#aeb7b0;font-size:12px;line-height:1.8;letter-spacing:0;max-width:440px;margin:28px 0 20px}.footer-intro>span{color:#768078;font-size:8px;letter-spacing:.15em}.seo-footer nav h3{font-family:"Instrument Serif";font-size:22px;font-weight:400;letter-spacing:0;margin:0 0 24px;color:#fff}.seo-footer nav a{display:block;color:#aeb7b0;font-size:10px;line-height:1.45;letter-spacing:.035em;padding:7px 0}.seo-footer nav a:hover{color:#fff}.footer-languages{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);padding-top:22px;display:flex;gap:20px;align-items:center}.footer-languages span{color:#768078;font-size:8px}.footer-languages a{font-size:9px}.seo-footer>small{padding-top:20px}
 @media(max-width:900px){.seo-footer{grid-template-columns:1fr 1fr}.footer-intro{grid-column:1/-1}.footer-languages{grid-column:1/-1}}
 @media(max-width:600px){.seo-footer{grid-template-columns:1fr}.seo-footer nav{border-top:1px solid rgba(255,255,255,.12);padding-top:25px}.footer-languages{flex-wrap:wrap}}
+.tally-wrap{background:var(--paper);padding:2.5vw;min-height:448px;align-self:start}.tally-wrap iframe{display:block;border:0;width:100%;min-height:448px}
+@media(max-width:900px){.tally-wrap{padding:5vw}}
+@media(max-width:600px){.tally-wrap{padding:5vw 3vw}}
