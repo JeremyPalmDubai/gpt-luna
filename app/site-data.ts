@@ -2,7 +2,7 @@ export const locales = ["en", "fr", "es", "pt"] as const;
 export type Locale = (typeof locales)[number];
 export type PageKey = "residences" | "investment" | "nuanu" | "buying-guide";
 
-export const baseUrl = "https://luna-residences-bali.palmdubai.chatgpt.site";
+export const baseUrl = "https://luna-bali.com";
 
 export const languageNames: Record<Locale, string> = { en: "EN", fr: "FR", es: "ES", pt: "PT" };
 
