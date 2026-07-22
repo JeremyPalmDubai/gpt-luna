@@ -1,1 +1,1 @@
-import {FranceInvestmentPage,franceInvestmentMetadata} from "../../france-investment-page";export const metadata=franceInvestmentMetadata("pt");export default function Page(){return <FranceInvestmentPage locale="pt"/>}
+import {InternationalInvestmentPage,internationalInvestmentMetadata} from "../../international-investment-page";const slug="invest-luna-residences-bali-from-france" as const;export const metadata=internationalInvestmentMetadata("pt",slug);export default function Page(){return <InternationalInvestmentPage locale="pt" slug={slug}/>}
