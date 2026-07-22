@@ -1,0 +1,1 @@
+import {FranceInvestmentPage,franceInvestmentMetadata} from "../../france-investment-page";export const metadata=franceInvestmentMetadata("fr");export default function Page(){return <FranceInvestmentPage locale="fr"/>}
